@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>agriemart</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>津軽農業大学</h2>
+    <h2>オンライン学食注文サービス</h2>
+    <h1>Agrie Mart</h1>
+
+    <label for="menunum">メニュー番号を入力:</label>
+    <input type="text" id="menunum" placeholder="例: 101">
+    <button id="searchMenu">メニューを検索</button> <hr>
+
+    <div id="output">
+        <p>ここにメニュー情報が表示されます。</p>
+    </div>
+
+    <div id="orderControls" style="display: none;"> <label for="quantity">数量:</label>
+        <input type="number" id="quantity" value="1" min="1" style="width: 60px; font-size: 20px; text-align: center;">
+        <button id="addToCart">カートに追加</button>
+    </div>
+
+    <hr>
+
+    <h2>注文内容</h2>
+    <table id="orderTable" border="1" style="width: 80%; margin: 20px auto; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>メニュー番号</th>
+                <th>名前</th>
+                <th>単価</th>
+                <th>数量</th>
+                <th>小計</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="orderTableBody">
+            <tr><td colspan="6">まだ商品がありません。</td></tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" style="text-align: right;"><strong>合計金額:</strong></td>
+                <td id="totalAmount">0円</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <button id="placeOrder" style="padding: 10px 30px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">注文確定</button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2'></script><script  src="./script.js"></script>
+
+</body>
+</html>
